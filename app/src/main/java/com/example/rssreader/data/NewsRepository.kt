@@ -8,13 +8,14 @@ interface NewsRepository {
 }
 
 class NetWorkNewsRepository(private val newsItemsApiService: NewsItemsApiService) : NewsRepository {
-    private val urlList = listOf(
-        "https://news.yahoo.co.jp/rss/topics/it.xml",
-        "https://news.yahoo.co.jp/rss/topics/science.xml",
-        "https://news.yahoo.co.jp/rss/topics/business.xml"
+    private val countryList = listOf(
+        "jp",
+        "us",
+        "cn"
     )
 
     override suspend fun getNewsItems(index: Int): NewsItems = newsItemsApiService.getNewsItems(
-        webUrl = urlList[index]
+        countryName = countryList[index],
+        apiKey = "a3fe7d72262f43948cf2db2aa973200f"
     )
 }

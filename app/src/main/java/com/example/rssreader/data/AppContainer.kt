@@ -11,7 +11,7 @@ interface AppContainer {
 }
 
 class DefaultAppContainer : AppContainer {
-    private val baseUrl = "https://api.rss2json.com/"
+    private val baseUrl = "https://newsapi.org/"
     private val jsonDC = Json { ignoreUnknownKeys = true }
     private val retrofit = Retrofit.Builder()
         .addConverterFactory(

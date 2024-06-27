@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     kotlin("plugin.serialization") version "1.9.22"
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -65,6 +66,7 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.retrofit2.kotlinx.serialization.converter)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.coil.compose)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

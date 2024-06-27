@@ -46,9 +46,9 @@ fun RSSReaderApp() {
         ) {
             val itemsViewModel: ItemsViewModel = viewModel(factory = ItemsViewModel.Factory)
             val options = listOf(
-                "Yahoo!ニュース・トピックス - IT",
-                "Yahoo!ニュース・トピックス - 科学",
-                "Yahoo!ニュース・トピックス - 経済"
+                "日本🇯🇵",
+                "米国🇺🇸",
+                "中国🇨🇳"
             )
             var expanded by remember {
                 mutableStateOf(false)
